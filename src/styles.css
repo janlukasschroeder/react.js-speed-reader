@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: calc(100% - 0px);
+}
+
+.input {
+  width: 40px;
+}
+
+.reader {
+  /* border: 1px solid black; */
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+  font-size: calc(32px + (24 - 16) * (100vw - 400px) / (800 - 400));
+}
+
+.reader-content {
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  bottom: 25%;
+  right: 25%;
+  width: 250;
+  height: 350;
+  margin: auto;
+  text-align: center;
+}
