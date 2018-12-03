@@ -80,16 +80,22 @@ export default class extends React.Component {
     return (
       <div className="wrapper">
         <div className={"settings"}>
-          <input
-            type="tel"
-            className={"input"}
-            onChange={this.onChange}
-            value={this.state.wordsPerMinute}
-          />
-          words per minute.
-          {!this.state.running && <button onClick={this.onStart}>Start</button>}
-          {this.state.running && <button onClick={this.onStop}>Stop</button>}
-          <button onClick={this.onRestart}>Reset</button>
+          <div className={"words-per-minute"}>
+            <input
+              type="tel"
+              className={"input"}
+              onChange={this.onChange}
+              value={this.state.wordsPerMinute}
+            />
+            words per minute.
+          </div>
+          <div className={"buttons"}>
+            {!this.state.running && (
+              <button onClick={this.onStart}>Start</button>
+            )}
+            {this.state.running && <button onClick={this.onStop}>Stop</button>}
+            <button onClick={this.onRestart}>Reset</button>
+          </div>
         </div>
         <div className={"reader"}>
           <div className={"reader-content"}>
